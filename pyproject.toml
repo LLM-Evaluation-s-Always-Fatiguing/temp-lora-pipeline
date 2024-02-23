@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "temp-lora-pipeline"
+version = "0.0.1"
+description = "An unofficial implementation of Temp-LoRA using Hugging Face transformers pipeline."
+authors = [
+    "The LEAF team (past and future) with the help of all our contributors <leaf@shanda.com>",
+]
+readme = "README.md"
+packages = [
+    { include = "temp_lora_pipeline", from = "src"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+torch = "^2.0.0"
+accelerate = "^0.27.0"
+transformers = "^4.38.0"
+peft = "^0.8.0"
+
+[tool.black]
+line-length = 119
+extend-exclude = "(src/leaf_playground_cli/templates)"
+skip-magic-trailing-comma = true
+safe = true
+required-version = "23.12.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
